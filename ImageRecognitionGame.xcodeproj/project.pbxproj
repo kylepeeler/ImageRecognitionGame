@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */; };
+		272219D12085A283008DE277 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 272219D02085A283008DE277 /* Inceptionv3.mlmodel */; };
+		272219D32085ADF7008DE277 /* iupuilogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 272219D22085ADF7008DE277 /* iupuilogo.jpg */; };
+		272219D52085B279008DE277 /* imagerecognizerlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 272219D42085B279008DE277 /* imagerecognizerlogo.png */; };
 		2727C276208598CE00373648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C275208598CE00373648 /* AppDelegate.swift */; };
-		2727C278208598CE00373648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C277208598CE00373648 /* ViewController.swift */; };
+		2727C278208598CE00373648 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2727C277208598CE00373648 /* StartGameViewController.swift */; };
 		2727C27B208598CE00373648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C279208598CE00373648 /* Main.storyboard */; };
 		2727C27D208598CF00373648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2727C27C208598CF00373648 /* Assets.xcassets */; };
 		2727C280208598CF00373648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C27E208598CF00373648 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognizerGameViewController.swift; sourceTree = "<group>"; };
+		272219D02085A283008DE277 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		272219D22085ADF7008DE277 /* iupuilogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iupuilogo.jpg; sourceTree = "<group>"; };
+		272219D42085B279008DE277 /* imagerecognizerlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagerecognizerlogo.png; sourceTree = "<group>"; };
 		2727C272208598CE00373648 /* ImageRecognitionGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognitionGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2727C275208598CE00373648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2727C277208598CE00373648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2727C277208598CE00373648 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		2727C27A208598CE00373648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2727C27C208598CF00373648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2727C27F208598CF00373648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +46,7 @@
 		2727C269208598CE00373648 = {
 			isa = PBXGroup;
 			children = (
+				272219D02085A283008DE277 /* Inceptionv3.mlmodel */,
 				2727C274208598CE00373648 /* ImageRecognitionGame */,
 				2727C273208598CE00373648 /* Products */,
 			);
@@ -55,11 +64,14 @@
 			isa = PBXGroup;
 			children = (
 				2727C275208598CE00373648 /* AppDelegate.swift */,
-				2727C277208598CE00373648 /* ViewController.swift */,
+				2727C277208598CE00373648 /* StartGameViewController.swift */,
 				2727C279208598CE00373648 /* Main.storyboard */,
+				272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */,
 				2727C27C208598CF00373648 /* Assets.xcassets */,
 				2727C27E208598CF00373648 /* LaunchScreen.storyboard */,
 				2727C281208598CF00373648 /* Info.plist */,
+				272219D22085ADF7008DE277 /* iupuilogo.jpg */,
+				272219D42085B279008DE277 /* imagerecognizerlogo.png */,
 			);
 			path = ImageRecognitionGame;
 			sourceTree = "<group>";
@@ -123,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2727C280208598CF00373648 /* LaunchScreen.storyboard in Resources */,
+				272219D32085ADF7008DE277 /* iupuilogo.jpg in Resources */,
 				2727C27D208598CF00373648 /* Assets.xcassets in Resources */,
+				272219D52085B279008DE277 /* imagerecognizerlogo.png in Resources */,
 				2727C27B208598CE00373648 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2727C278208598CE00373648 /* ViewController.swift in Sources */,
+				2727C278208598CE00373648 /* StartGameViewController.swift in Sources */,
+				272219D12085A283008DE277 /* Inceptionv3.mlmodel in Sources */,
 				2727C276208598CE00373648 /* AppDelegate.swift in Sources */,
+				272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
