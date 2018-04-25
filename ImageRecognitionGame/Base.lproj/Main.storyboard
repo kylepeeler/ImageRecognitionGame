@@ -13,7 +13,7 @@
         <!--StartGame-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="StartGame" id="BYZ-38-t0r" customClass="StartGameViewController" sceneMemberID="viewController">
+                <viewController title="StartGame" id="BYZ-38-t0r" customClass="StartGameViewController" customModule="ImageRecognitionGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="2Bk-rA-meT"/>
                                 </constraints>
-                                <string key="text">This app was created as a final project for my CSCI 490 Data Science course at IUPUI. It was developed by Kyle Peeler and Nate Rupsis. It uses Apple's CoreML machine learning library to classify images using the InceptionV3 model provided by Apple.</string>
+                                <string key="text">This app was created as a final project for our CSCI 490 Data Science course at IUPUI. It was developed by Kyle Peeler and Nate Rupsis. It uses Apple's CoreML machine learning library to classify images using the InceptionV3 model provided by Apple.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWE-DM-WLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="881.10944527736137"/>
+            <point key="canvasLocation" x="-878" y="912"/>
         </scene>
         <!--ImageRecognizer Game-->
         <scene sceneID="WMb-fD-DTr">
@@ -180,6 +180,9 @@
                                         <state key="normal" title="Skip">
                                             <color key="titleColor" red="0.88258272410000005" green="0.15506574510000001" blue="0.14689809079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="skip:" destination="Bp5-8J-0p5" eventType="touchUpInside" id="iEB-1C-bQm"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNH-s5-aCy">
                                         <rect key="frame" x="204" y="0.0" width="139" height="20.5"/>
@@ -207,16 +210,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="l8y-VG-3j7">
-                                <rect key="frame" x="16" y="20" width="343" height="41"/>
+                                <rect key="frame" x="16" y="20" width="343" height="62"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you find:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEM-Ql-8Eg">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Can you find:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEM-Ql-8Eg">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="41.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="(Label to find goes here)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHP-Sj-v2a">
-                                        <rect key="frame" x="0.0" y="20.5" width="187.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="(Label to find goes here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHP-Sj-v2a">
+                                        <rect key="frame" x="0.0" y="41.5" width="187.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZv-K2-3MH">
+                                <rect key="frame" x="56" y="438" width="263" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Attempts for this label remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-Ll-0ak">
+                                        <rect key="frame" x="0.0" y="0.0" width="252.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-Rp-uxj">
+                                        <rect key="frame" x="252.5" y="0.0" width="10.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -234,13 +255,13 @@
                             <constraint firstItem="xy2-K5-GRo" firstAttribute="bottom" secondItem="Ft4-R6-FnM" secondAttribute="bottom" constant="34.5" id="Ia3-Lq-3Nk"/>
                             <constraint firstItem="kWa-P2-lfK" firstAttribute="centerX" secondItem="ylB-8L-DTa" secondAttribute="centerX" id="Ix9-wx-KGT"/>
                             <constraint firstItem="xy2-K5-GRo" firstAttribute="trailing" secondItem="l8y-VG-3j7" secondAttribute="trailing" constant="16" id="JJP-NN-dFv"/>
+                            <constraint firstItem="kWa-P2-lfK" firstAttribute="top" secondItem="l8y-VG-3j7" secondAttribute="bottom" constant="20" id="NWu-aQ-sIk"/>
                             <constraint firstItem="Ft4-R6-FnM" firstAttribute="leading" secondItem="xy2-K5-GRo" secondAttribute="leading" constant="16" id="O50-Pg-kp9"/>
                             <constraint firstItem="NfJ-0i-C9U" firstAttribute="top" secondItem="kWa-P2-lfK" secondAttribute="bottom" constant="20" id="UBJ-Af-Iop"/>
                             <constraint firstItem="kWa-P2-lfK" firstAttribute="top" secondItem="blj-Ks-AAK" secondAttribute="top" constant="102" id="UOU-8o-mcG"/>
                             <constraint firstItem="NfJ-0i-C9U" firstAttribute="trailing" secondItem="l8y-VG-3j7" secondAttribute="trailing" id="YRz-Lz-DEU"/>
                             <constraint firstItem="l8y-VG-3j7" firstAttribute="leading" secondItem="xy2-K5-GRo" secondAttribute="leading" constant="16" id="cXP-Hq-aAw"/>
                             <constraint firstItem="kWa-P2-lfK" firstAttribute="centerY" secondItem="ylB-8L-DTa" secondAttribute="centerY" id="dMS-tJ-3fA"/>
-                            <constraint firstItem="kWa-P2-lfK" firstAttribute="top" secondItem="l8y-VG-3j7" secondAttribute="bottom" constant="41" id="hMR-Ze-cwR"/>
                             <constraint firstItem="xy2-K5-GRo" firstAttribute="trailing" secondItem="Ft4-R6-FnM" secondAttribute="trailing" constant="16" id="v8a-We-aPv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xy2-K5-GRo"/>
@@ -260,12 +281,15 @@
                     <connections>
                         <outlet property="classifier" destination="NfJ-0i-C9U" id="yKt-me-tnU"/>
                         <outlet property="imageView" destination="kWa-P2-lfK" id="Pt2-ab-XrC"/>
+                        <outlet property="labelToFind" destination="cHP-Sj-v2a" id="cve-Ft-jzH"/>
+                        <outlet property="livesRemainingLabel" destination="YkX-fV-sLZ" id="ST6-7G-Dse"/>
                         <outlet property="startText" destination="ylB-8L-DTa" id="gFB-MB-2Ty"/>
+                        <segue destination="RfQ-JH-Cxa" kind="show" identifier="lostGame" id="9kH-Pq-j62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvI-I4-0PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2095" y="241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZIx-C6-i75">
@@ -285,9 +309,45 @@
             </objects>
             <point key="canvasLocation" x="940" y="134"/>
         </scene>
+        <!--Game Result-->
+        <scene sceneID="Mhp-jw-DGD">
+            <objects>
+                <viewController id="RfQ-JH-Cxa" customClass="GameResult" customModule="ImageRecognitionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fcy-Jn-xF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsX-eB-2Xd">
+                                <rect key="frame" x="152" y="376" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XgS-3b-PJE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Lost 😞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-CA-9XI">
+                                <rect key="frame" x="94" y="181" width="186" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RNF-kv-A2E"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hug-PU-edm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141.5999999999999" y="939.58020989505258"/>
+        </scene>
     </scenes>
     <resources>
         <image name="imagerecognizerlogo.png" width="1024" height="1024"/>
         <image name="iupuilogo.jpg" width="768" height="700"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XgS-3b-PJE"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartGameViewController.swift
 //  ImageRecognitionGame
 //
 //  Created by Kyle Peeler on 4/16/18.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

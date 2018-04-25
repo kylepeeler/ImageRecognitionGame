@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271A19BE2090C338002032D5 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A19BD2090C338002032D5 /* GameResult.swift */; };
 		272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */; };
 		272219D12085A283008DE277 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 272219D02085A283008DE277 /* Inceptionv3.mlmodel */; };
 		272219D32085ADF7008DE277 /* iupuilogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 272219D22085ADF7008DE277 /* iupuilogo.jpg */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271A19BD2090C338002032D5 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognizerGameViewController.swift; sourceTree = "<group>"; };
 		272219D02085A283008DE277 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		272219D22085ADF7008DE277 /* iupuilogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iupuilogo.jpg; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				2727C277208598CE00373648 /* StartGameViewController.swift */,
 				2727C279208598CE00373648 /* Main.storyboard */,
 				272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */,
+				271A19BD2090C338002032D5 /* GameResult.swift */,
 				2727C27C208598CF00373648 /* Assets.xcassets */,
 				2727C27E208598CF00373648 /* LaunchScreen.storyboard */,
 				2727C281208598CF00373648 /* Info.plist */,
@@ -153,6 +156,7 @@
 				272219D12085A283008DE277 /* Inceptionv3.mlmodel in Sources */,
 				2727C276208598CE00373648 /* AppDelegate.swift in Sources */,
 				272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */,
+				271A19BE2090C338002032D5 /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
