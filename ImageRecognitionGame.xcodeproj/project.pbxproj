@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270F3CD62091838F00F95451 /* WonGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F3CD52091838F00F95451 /* WonGameResult.swift */; };
 		271A19BE2090C338002032D5 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A19BD2090C338002032D5 /* GameResult.swift */; };
 		272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */; };
 		272219D12085A283008DE277 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 272219D02085A283008DE277 /* Inceptionv3.mlmodel */; };
@@ -17,9 +18,12 @@
 		2727C27B208598CE00373648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C279208598CE00373648 /* Main.storyboard */; };
 		2727C27D208598CF00373648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2727C27C208598CF00373648 /* Assets.xcassets */; };
 		2727C280208598CF00373648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2727C27E208598CF00373648 /* LaunchScreen.storyboard */; };
+		C64FA29987FEE3FAA4871F21 /* Pods_ImageRecognitionGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C08AFCE9BB36D8A5587FCF /* Pods_ImageRecognitionGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C566AF7F5C55124B00DACE /* Pods-ImageRecognitionGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognitionGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognitionGame/Pods-ImageRecognitionGame.debug.xcconfig"; sourceTree = "<group>"; };
+		270F3CD52091838F00F95451 /* WonGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonGameResult.swift; sourceTree = "<group>"; };
 		271A19BD2090C338002032D5 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognizerGameViewController.swift; sourceTree = "<group>"; };
 		272219D02085A283008DE277 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		2727C27C208598CF00373648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2727C27F208598CF00373648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2727C281208598CF00373648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C08AFCE9BB36D8A5587FCF /* Pods_ImageRecognitionGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageRecognitionGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A876610DE6DE79438BF61F /* Pods-ImageRecognitionGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognitionGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognitionGame/Pods-ImageRecognitionGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64FA29987FEE3FAA4871F21 /* Pods_ImageRecognitionGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,8 @@
 				272219D02085A283008DE277 /* Inceptionv3.mlmodel */,
 				2727C274208598CE00373648 /* ImageRecognitionGame */,
 				2727C273208598CE00373648 /* Products */,
+				508BF7C4B1117135D8F2DF2C /* Pods */,
+				51696C25F6B1FD101783429C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +79,7 @@
 				2727C279208598CE00373648 /* Main.storyboard */,
 				272219CE20859DC9008DE277 /* ImageRecognizerGameViewController.swift */,
 				271A19BD2090C338002032D5 /* GameResult.swift */,
+				270F3CD52091838F00F95451 /* WonGameResult.swift */,
 				2727C27C208598CF00373648 /* Assets.xcassets */,
 				2727C27E208598CF00373648 /* LaunchScreen.storyboard */,
 				2727C281208598CF00373648 /* Info.plist */,
@@ -79,6 +89,23 @@
 			path = ImageRecognitionGame;
 			sourceTree = "<group>";
 		};
+		508BF7C4B1117135D8F2DF2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22C566AF7F5C55124B00DACE /* Pods-ImageRecognitionGame.debug.xcconfig */,
+				E3A876610DE6DE79438BF61F /* Pods-ImageRecognitionGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		51696C25F6B1FD101783429C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65C08AFCE9BB36D8A5587FCF /* Pods_ImageRecognitionGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2727C284208598CF00373648 /* Build configuration list for PBXNativeTarget "ImageRecognitionGame" */;
 			buildPhases = (
+				61F274CFD1509CD86C22A492 /* [CP] Check Pods Manifest.lock */,
 				2727C26E208598CE00373648 /* Sources */,
 				2727C26F208598CE00373648 /* Frameworks */,
 				2727C270208598CE00373648 /* Resources */,
+				2F83A025B93C69299C91BFE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +176,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F83A025B93C69299C91BFE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognitionGame/Pods-ImageRecognitionGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognitionGame/Pods-ImageRecognitionGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61F274CFD1509CD86C22A492 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageRecognitionGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2727C26E208598CE00373648 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -157,6 +225,7 @@
 				2727C276208598CE00373648 /* AppDelegate.swift in Sources */,
 				272219CF20859DC9008DE277 /* ImageRecognizerGameViewController.swift in Sources */,
 				271A19BE2090C338002032D5 /* GameResult.swift in Sources */,
+				270F3CD62091838F00F95451 /* WonGameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +367,10 @@
 		};
 		2727C285208598CF00373648 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C566AF7F5C55124B00DACE /* Pods-ImageRecognitionGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9WVBZX2GJ;
 				INFOPLIST_FILE = ImageRecognitionGame/Info.plist;
@@ -307,17 +378,20 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.kylepeeler.ImageRecognitionGame;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylepeeler.ImgRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2727C286208598CF00373648 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3A876610DE6DE79438BF61F /* Pods-ImageRecognitionGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9WVBZX2GJ;
 				INFOPLIST_FILE = ImageRecognitionGame/Info.plist;
@@ -325,10 +399,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.kylepeeler.ImageRecognitionGame;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylepeeler.ImgRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

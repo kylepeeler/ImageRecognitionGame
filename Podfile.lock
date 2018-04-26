@@ -1,0 +1,22 @@
+PODS:
+  - SAConfettiView (0.1.8)
+
+DEPENDENCIES:
+  - SAConfettiView (from `https://github.com/Shanlon/SAConfettiView.git`, commit `c3d602ba939278d28cf7634d0cf5b38d113cd8d2`)
+
+EXTERNAL SOURCES:
+  SAConfettiView:
+    :commit: c3d602ba939278d28cf7634d0cf5b38d113cd8d2
+    :git: https://github.com/Shanlon/SAConfettiView.git
+
+CHECKOUT OPTIONS:
+  SAConfettiView:
+    :commit: c3d602ba939278d28cf7634d0cf5b38d113cd8d2
+    :git: https://github.com/Shanlon/SAConfettiView.git
+
+SPEC CHECKSUMS:
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
+
+PODFILE CHECKSUM: d1930b94f1b5bb5f694e5fd7f6bfdfb32c752113
+
+COCOAPODS: 1.5.0

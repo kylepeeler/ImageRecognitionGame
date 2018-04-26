@@ -18,34 +18,83 @@ class ImageRecognizerGameViewController: UIViewController, UINavigationControlle
     @IBOutlet weak var startText: UILabel!
     @IBOutlet weak var labelToFind: UILabel!
     @IBOutlet weak var livesRemainingLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var attemptsRemainingLabel: UILabel!
     var labelsToFind = ["ballpoint, ballpoint pen, ballpen, Biro",
                         "backpack, back pack, knapsack, packsack, rucksack, haversack",
                         "coffee mug",
                         "digital watch",
-                        "laptop, laptop computer",
+                        "notebook, notebook computer",
                         "mouse, computer mouse",
                         "paper towel",
                         "pencil sharpener",
                         "rubber eraser, rubber, pencil eraser",
-                        "sunglasses, dark glasses, shades",
                         "wall clock",
                         "banana",
                         "wallet, billfold, notecase, pocketbook",
                         "umbrella",
-                        "toilet seat"]
+                        "toilet seat",
+                        "monitor"
+    ]
     var lifeCount = 3
     var numberCorrect = 0
     var attempts = 3
-    var currentLabelToFind: String?
+    var currentLabelToFind: String = ""
     
-    var startedGame: Bool = false
+    var startedCapture: Bool = false
     
-    func subtractLife(){
+    func decrementLife(){
         self.lifeCount = self.lifeCount - 1;
         self.livesRemainingLabel.text = "\(self.lifeCount)"
-        if (lifeCount < 1){
+        if (self.lifeCount < 1){
             self.performSegue(withIdentifier: "lostGame", sender: nil)
+        }else{
+            self.setNewLabel()
         }
+        
+    }
+    
+    func decrementAttempt(){
+        self.attempts = self.attempts - 1;
+        if (self.attempts == 0){
+            let alert = UIAlertController(title: "Out of attempts", message: "You have used all the attempts on this label and got them incorrect. You have lost a life.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                self.decrementLife()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            self.attemptsRemainingLabel.text = "\(attempts)"
+        }
+    }
+    
+    func incrementScore(){
+        self.numberCorrect = self.numberCorrect + 1;
+        self.scoreLabel.text = "\(numberCorrect)"
+        if (self.numberCorrect >= 5){
+            self.performSegue(withIdentifier: "wonGame", sender: nil);
+        }else{
+            let alert = UIAlertController(title: "Correct!", message: "Click continue to move onto the next label", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                self.setNewLabel()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    @IBAction func setNewLabel(){
+        if let newLabel = getRandomLabel(){
+            currentLabelToFind = newLabel
+        }
+        self.labelToFind.text = currentLabelToFind
+        //reset attempts back to 3
+        attempts = 3;
+        attemptsRemainingLabel.text = "\(attempts)"
+        classifier.text = ""
+        self.imageView.isHidden = true
+        startText.text = "Capture an image that matches the description above. Click the camera in the top left to take a photo."
+        startText.isHidden = false
+        
     }
     
     func getRandomLabel() -> String?{
@@ -65,9 +114,7 @@ class ImageRecognizerGameViewController: UIViewController, UINavigationControlle
         super.viewDidLoad()
         lifeCount = 3;
         numberCorrect = 0;
-        attempts = 3;
-        currentLabelToFind = getRandomLabel()
-        self.labelToFind.text = currentLabelToFind
+        self.setNewLabel();
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,8 +131,8 @@ class ImageRecognizerGameViewController: UIViewController, UINavigationControlle
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "I'm sure", style: .destructive, handler: {action in
-                self.subtractLife();
-                self.labelToFind.text = self.getRandomLabel();
+                self.decrementLife();
+                self.setNewLabel();
                 print("lives is now \(self.lifeCount)")
        }))
         
@@ -148,19 +195,24 @@ class ImageRecognizerGameViewController: UIViewController, UINavigationControlle
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         
-        startedGame = true
-        if startedGame{
-            startText.isHidden = true
-        }
+        
+        startText.isHidden = true
         
         imageView.image = newImage
-        
+        imageView.isHidden = false
+
         guard let prediction = try? model.prediction(image: pixelBuffer!) else {
             return
         }
         
-        classifier.text = "I think this is a \(prediction.classLabel)."
+        classifier.text = "I thought this was a \(prediction.classLabel)."
+        if (prediction.classLabel == currentLabelToFind){
+            incrementScore()
+        }else{
+            decrementAttempt()
+        }
         print("Detected image as \(prediction.classLabel)")
+        
     }
 }
 
