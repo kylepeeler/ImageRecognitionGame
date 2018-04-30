@@ -1,17 +1,21 @@
 # Scavenger Hunt
 For our CSCI 490 data science final project, we created a image recognition scavenger hunt game. The objective of this game is to find 5 objects from a predetermined list of objects. The user is given 3 lives, and 3 attempts for each item. The user may choose to skip an item at the cost of a life. If the user finds all 5 objects, they win, else they lose. This game makes use of [Apple's CoreML](https://developer.apple.com/documentation/coreml), and Google's [Inception-v3 image classification model](https://arxiv.org/abs/1512.00567). We used a very small subset of the labels that Inception-v3 could recognize and that we thought were common objects in the classroom for the user to find.
 
-# Build/Run
-In order to build and run this project, you will need a Mac that is running at least XCode 9.3. This project makes use of [Cocoapods](https://cocoapods.org/) for dependency management. As such, you must open the project using the `ImageRecognitionGame.xcworkspace` file so that external dependencies are loaded properly. This app was designed to run on an iPhone X, but can be ran on any iPhone.
+# Building and Running
+In order to build and run this project, you will need a Mac that is running at least XCode 9.3. This project makes use of [Cocoapods](https://cocoapods.org/) for dependency management. As such, you must open the project using the `ImageRecognitionGame.xcworkspace` file so that external dependencies are loaded properly. Within XCode you can build and run the application as usual. This app was designed to run on an iPhone X, but can be ran on any iPhone.
 
 # Project breakdown 
-The app idea was a collaboration between Nate and Kyle. We originally were anticipating on building a web app that would allow for multi-platform use. However after discovering the ease of use of Apple's CoreML technologies, we found it gave us an advantage to have the neural network running off the application itself. 
+The app idea was a collaboration between Nate and Kyle. We originally were anticipating on building a web app that would allow for multi-platform use. However after discovering the ease of use of Apple's CoreML technologies, we found it gave us an advantage to have the neural network running off the application itself. The application allows use of the camera and the image library for ease of demo purposes.
+
+## [Kyle's](https://github.com/kylepeeler) Contribution
+Kyle's contribution was downloading the Inception-V3 model, implementing it using CoreML in our app, and creating a base proof of concept that allowed the user to capture an image and have the neural network output it's guess at what the object in the picture is. After doing this, I pair programmed the gamification logic that Nate developed into the application. We both then worked on the styling of the application to make it look pretty. We both extensively tested the application and had some of our friends give it a trial run to see if there were any user experience issues.
 
 ## [Nate's](https://github.com/rupsis) Contribution
 Nate's initially designed the original application structure, before a mutual decision to create a native Swift app. He wrote the game logic for the application, and finished the app by pair programming with Kyle. 
 
-## [Kyle's](https://github.com/kylepeeler) Contribution
-Kyle's contribution was downloading the Inception-V3 model, implementing it using CoreML in our app, and creating a base proof of concept that allowed the user to capture an image and have the neural network output it's guess at what the object in the picture is. After doing this, I pair programmed the gamification logic that Nate developed into the application. We both then worked on the styling of the application to make it look pretty. We both extensively tested the application and had some of our friends give it a trial run to see if there were any user experience issues.
+# Video
+### Example App Run
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/ExampleRun.gif" alt="Example Run">
 
 # Screenshots
 
@@ -27,11 +31,8 @@ Kyle's contribution was downloading the Inception-V3 model, implementing it usin
 ### Found Label
 <img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/IMG_0458.png" alt="Found Label" width="300px">
 
-# Video
-### Example App Run
-<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/ExampleRun.gif" alt="Example Run">
-
-
+# Future Work
+In the future, we plan to release this app on Apple's App Store. We also plan to remove the use of the image library, as this was included for demo purposes. We also plan to train our own neural network using TensorFlow to allow for a wider (or more specific) variety of objects to find. We think this a good use case for this application is a student orientation scavenger hunt, for example having a neural network detect landmarks on a campus. This would allow for a new student to get oriented to a campus quickly. We also might look into monitizing this app by allowing the user to earn skips by watching ads.
 
 
 
