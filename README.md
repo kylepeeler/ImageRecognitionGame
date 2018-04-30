@@ -16,20 +16,20 @@ Kyle's contribution was downloading the Inception-V3 model, implementing it usin
 # Screenshots
 
 ### Start Screen
-<img src="screenshots/IMG_0455.png" alt="Start Screen" style="width: 300px;"/>
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/IMG_0455.png" alt="Start Screen" style="width: 300px;"/>
 
 ### About Screen
-<img src="screenshots/IMG_0456.png" alt="About Screen" style="width: 300px;"/>
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/IMG_0456.png" alt="About Screen" style="width: 300px;"/>
 
 ### Find Label
-<img src="screenshots/IMG_0457.png" alt="Guess Screen" style="width: 300px;"/>
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/IMG_0457.png" alt="Guess Screen" style="width: 300px;"/>
 
 ### Found Label
-<img src="screenshots/IMG_0458.png" alt="Found Label" style="width: 300px;">
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/IMG_0458.png" alt="Found Label" style="width: 300px;">
 
 # Video
 ### Example App Run
-<img src="screenshots/ExampleRun.gif" alt="Example Run">
+<img src="https://github.com/kylepeeler/ImageRecognitionGame/raw/master/Screenshots/ExampleRun.gif" alt="Example Run">
 
 
 
