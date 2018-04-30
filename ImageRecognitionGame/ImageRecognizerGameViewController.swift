@@ -206,6 +206,7 @@ class ImageRecognizerGameViewController: UIViewController, UINavigationControlle
         }
         
         classifier.text = "I thought this was a \(prediction.classLabel)."
+        print(prediction.classLabelProbs)
         if (prediction.classLabel == currentLabelToFind){
             incrementScore()
         }else{
